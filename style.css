@@ -1,0 +1,229 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('./resources/Roboto-Black.ttf') format('truetype'),
+    url('./resources/Roboto-Bold.ttf') format('truetype'),
+    url('./resources/Roboto-Light.ttf') format('truetype'),
+    url('./resources/Roboto-Medium.ttf') format('truetype'),
+    url('./resources/Roboto-Regular.ttf') format('truetype'),
+    url('./resources/Roboto-Thin.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url('./resources/Oswald_font/Oswald/static/Oswald-Bold.ttf')
+      format('truetype'),
+    url('./resources/Oswald_font/Oswald/static/Oswald-ExtraLight.ttf')
+      format('truetype'),
+    url('./resources/Oswald_font/Oswald/static/Oswald-Light.ttf')
+      format('truetype'),
+    url('./resources/Oswald_font/Oswald/static/Oswald-Medium.ttf')
+      format('truetype'),
+    url('./resources/Oswald_font/Oswald/static/Oswald-Regular.ttf')
+      format('truetype'),
+    url('./resources/Oswald_font/Oswald/static/Oswald-SemiBold.ttf')
+      format('truetype');
+}
+
+:root {
+  --bgColor: #5c5c00;
+  --darkerGreen: #4c4c00;
+  --incExpBgColor: aliceblue;
+  --transBgColor: aliceblue;
+  --titleBgColor: aliceblue;
+  --generalText: white;
+  --titleText: #5c5c00;
+  --incomeText: #00aaff;
+  --expenseText: #ff7700;
+  --errorText: #ff2200;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bgColor);
+  margin: 0rem;
+}
+
+.titleDiv {
+  align-items: center;
+  justify-content: center;
+  margin: 4rem 0rem 0rem 0rem;
+  background-color: var(--titleBgColor);
+  width: 100%;
+  /* font-family: 'Roboto-Bold', sans-serif; */
+}
+
+.title.largeText {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--titleText);
+  text-align: center;
+  font-family: 'Oswald Oswald-Bold', sans-serif;
+}
+
+.tagLine {
+  position: relative;
+  top: -1.8rem;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--titleText);
+  font-family: 'Oswald Oswald-Medium', sans-serif;
+}
+
+.balanceDiv {
+  width: 60%;
+  height: 120px;
+  margin-top: 1rem;
+  color: var(--generalText);
+  padding: 1rem;
+  font-family: 'Oswald Oswald-Bold', sans-serif;
+}
+
+.balanceDiv .balanceR {
+  font-size: 5rem;
+  position: relative;
+  top: -1.4rem;
+  left: 0.05rem;
+}
+.balanceDiv .balanceP {
+  font-size: 2.5rem;
+  position: relative;
+  top: -1.4rem;
+  left: 0.05rem;
+}
+
+.fa-rupee-sign.balanceAmt {
+  position: relative;
+  top: -2.5rem;
+  font-size: 2.5rem;
+}
+
+.incomeExpenseDiv {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  background-color: var(--incExpBgColor);
+  width: 60%;
+  height: 6rem;
+  border-radius: 1rem;
+  color: var(--generalText);
+  padding: 1rem;
+  margin-top: 0.5rem;
+  font-family: 'Oswald-Light', sans-serif;
+}
+.incomeDiv {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: var(--incomeText);
+}
+
+.expenseDiv {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: var(--expenseText);
+  border-left: 0.1rem solid var(--bgColor);
+}
+
+.incomeDiv .incomeR,
+.expenseDiv .expenseR {
+  font-size: 2rem;
+  position: relative;
+  top: -0.6rem;
+  left: 0.05rem;
+}
+.incomeDiv .incomeP,
+.expenseDiv .expenseP {
+  font-size: 1rem;
+  position: relative;
+  top: -0.6rem;
+  left: 0.05rem;
+}
+
+.fa-rupee-sign {
+  position: relative;
+  top: -1.1rem;
+  font-size: 1rem;
+}
+
+.transactionsDiv {
+  width: 60%;
+  margin-top: 3rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: var(--transBgColor);
+  text-align: center;
+  color: var(--bgColor);
+  font-family: 'Oswald-Light', sans-serif;
+}
+
+.addTransactions {
+  width: 60%;
+  margin-top: 3rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: var(--transBgColor);
+  text-align: center;
+  color: var(--bgColor);
+  font-family: 'Oswald-Bold', sans-serif;
+}
+
+.newDescDiv {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.8rem;
+}
+
+.descIpL {
+  text-align: left;
+}
+
+.descIp {
+  margin-top: 0.2rem;
+  width: 100%;
+  height: 1.8rem;
+  border: 0.1rem solid;
+  border-radius: 1rem;
+}
+.newAmtDiv {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.8rem;
+}
+
+.amtIpL {
+  text-align: left;
+}
+
+.amtIp {
+  margin-top: 0.2rem;
+  width: 100%;
+  height: 1.8rem;
+  border: 0.1rem solid;
+  border-radius: 1rem;
+}
+
+.error-msg {
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+  color: var(--errorText);
+  text-align: left;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+button.addTransBtn {
+  margin-top: 0.5rem;
+  border-radius: 1rem;
+  color: var(--generalText);
+  background-color: var(--incomeText);
+}
